@@ -25,7 +25,7 @@ bool Preprocess(const path& in_file, const path& out_file, const vector<path>& i
         return false;
     }
 
-    // Create or open output file in append mode
+    
     ofstream output(out_file, ios::app);
     if (!output.is_open()) {
         cerr << "Failed to open output file: " << out_file << endl;
@@ -91,7 +91,7 @@ bool ProcessFile(const path& file_path, ofstream& output, const vector<path>& in
 string GetFileContents(string file) {
     ifstream stream(file);
 
-    // конструируем string по двум итераторам
+  
     return {(istreambuf_iterator<char>(stream)), istreambuf_iterator<char>()};
 }
 
